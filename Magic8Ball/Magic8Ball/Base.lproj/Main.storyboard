@@ -1,24 +1,139 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="AmericanTypewriter.ttc">
+            <string>AmericanTypewriter-Bold</string>
+        </array>
+        <array key="Zapfino.ttf">
+            <string>Zapfino</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Magic8Ball" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cb0-l4-EI5">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ask me anything" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="whe-kx-Ozc">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="115"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="115" id="Q8c-fo-WaV"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Zapfino" family="Zapfino" pointSize="30"/>
+                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yg5-Zq-X0v" userLabel="Magic8BallContainer">
+                                        <rect key="frame" x="0.0" y="115" width="414" height="360"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ball1" translatesAutoresizingMaskIntoConstraints="NO" id="wpe-xd-fWS" customClass="ball1">
+                                                <rect key="frame" x="29.666666666666657" y="30" width="355" height="301"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="301" id="Hnv-tx-few"/>
+                                                    <constraint firstAttribute="width" constant="355" id="kLs-KM-viE"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="360" id="bva-d7-We3"/>
+                                            <constraint firstItem="wpe-xd-fWS" firstAttribute="centerX" secondItem="yg5-Zq-X0v" secondAttribute="centerX" id="rWQ-Vo-0Dj"/>
+                                            <constraint firstItem="wpe-xd-fWS" firstAttribute="centerY" secondItem="yg5-Zq-X0v" secondAttribute="centerY" id="tFc-8y-5hB"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yl9-ap-tQl" userLabel="ButtonContainer">
+                                        <rect key="frame" x="0.0" y="475" width="414" height="65"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dmp-G4-edX">
+                                                <rect key="frame" x="65.666666666666686" y="0.0" width="284" height="65"/>
+                                                <color key="backgroundColor" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="284" id="qw2-FT-lfE"/>
+                                                    <constraint firstAttribute="height" constant="65" id="uyX-aG-kOz"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="AmericanTypewriter-Bold" family="American Typewriter" pointSize="40"/>
+                                                <color key="tintColor" red="0.0" green="0.56284224989999998" blue="0.31881666180000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="Shake Me!">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="shakeButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hDg-Fh-u0G"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="dmp-G4-edX" secondAttribute="bottom" id="017-hu-fbr"/>
+                                            <constraint firstAttribute="height" constant="65" id="B9P-oC-VO5"/>
+                                            <constraint firstItem="dmp-G4-edX" firstAttribute="centerX" secondItem="yl9-ap-tQl" secondAttribute="centerX" id="UQ4-J4-y34"/>
+                                            <constraint firstItem="dmp-G4-edX" firstAttribute="centerY" secondItem="yl9-ap-tQl" secondAttribute="centerY" id="eJy-zF-v7E"/>
+                                            <constraint firstItem="dmp-G4-edX" firstAttribute="top" secondItem="yl9-ap-tQl" secondAttribute="top" id="itj-3p-pRW"/>
+                                        </constraints>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=".. or you can shake your phone" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bM1-KK-NPO">
+                                        <rect key="frame" x="0.0" y="540" width="414" height="65"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="65" id="af1-6N-p0r"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="yl9-ap-tQl" firstAttribute="top" secondItem="yg5-Zq-X0v" secondAttribute="bottom" id="0Gh-k7-hUy"/>
+                                    <constraint firstItem="yl9-ap-tQl" firstAttribute="top" secondItem="yg5-Zq-X0v" secondAttribute="bottom" id="2DI-yk-g0E"/>
+                                    <constraint firstItem="bM1-KK-NPO" firstAttribute="leading" secondItem="Cb0-l4-EI5" secondAttribute="leading" id="4Pg-pg-8ri"/>
+                                    <constraint firstItem="yg5-Zq-X0v" firstAttribute="top" secondItem="whe-kx-Ozc" secondAttribute="bottom" id="5rb-Lj-Dli"/>
+                                    <constraint firstAttribute="trailing" secondItem="whe-kx-Ozc" secondAttribute="trailing" id="B2t-0U-mUa"/>
+                                    <constraint firstItem="bM1-KK-NPO" firstAttribute="leading" secondItem="Cb0-l4-EI5" secondAttribute="leading" id="F5H-EY-k3T"/>
+                                    <constraint firstItem="bM1-KK-NPO" firstAttribute="top" secondItem="yl9-ap-tQl" secondAttribute="bottom" id="FhN-bz-YIi"/>
+                                    <constraint firstItem="yl9-ap-tQl" firstAttribute="leading" secondItem="Cb0-l4-EI5" secondAttribute="leading" id="GDK-SA-rob"/>
+                                    <constraint firstAttribute="trailing" secondItem="yl9-ap-tQl" secondAttribute="trailing" id="Khs-di-qIH"/>
+                                    <constraint firstItem="whe-kx-Ozc" firstAttribute="leading" secondItem="Cb0-l4-EI5" secondAttribute="leading" id="RVR-GV-dL9"/>
+                                    <constraint firstItem="whe-kx-Ozc" firstAttribute="top" secondItem="Cb0-l4-EI5" secondAttribute="top" id="hMS-pw-LgT"/>
+                                    <constraint firstItem="bM1-KK-NPO" firstAttribute="top" secondItem="yl9-ap-tQl" secondAttribute="bottom" id="isZ-kS-eJm"/>
+                                    <constraint firstItem="yg5-Zq-X0v" firstAttribute="top" secondItem="whe-kx-Ozc" secondAttribute="bottom" id="jhX-la-BhI"/>
+                                    <constraint firstItem="yg5-Zq-X0v" firstAttribute="leading" secondItem="Cb0-l4-EI5" secondAttribute="leading" id="oLE-rq-Bxt"/>
+                                    <constraint firstAttribute="trailing" secondItem="bM1-KK-NPO" secondAttribute="trailing" id="p3S-ES-k6w"/>
+                                    <constraint firstAttribute="trailing" secondItem="yg5-Zq-X0v" secondAttribute="trailing" id="r8q-bU-o5x"/>
+                                    <constraint firstAttribute="trailing" secondItem="bM1-KK-NPO" secondAttribute="trailing" id="uGy-3A-1qt"/>
+                                    <constraint firstItem="bM1-KK-NPO" firstAttribute="top" secondItem="yl9-ap-tQl" secondAttribute="bottom" id="z8l-QS-yod"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Cb0-l4-EI5" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Kfa-yI-Sdu"/>
+                            <constraint firstItem="Cb0-l4-EI5" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="SBn-xd-cCp"/>
+                            <constraint firstItem="Cb0-l4-EI5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Thp-rv-0ON"/>
+                            <constraint firstItem="Cb0-l4-EI5" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="sko-j0-dkb"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="ballImageView" destination="wpe-xd-fWS" id="gAg-ab-Ur6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="31.884057971014496" y="32.608695652173914"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="ball1" width="457" height="410"/>
+    </resources>
 </document>
